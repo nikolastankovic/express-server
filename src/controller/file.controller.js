@@ -1,4 +1,3 @@
-const { json } = require("body-parser");
 const uploadFile = require("../middleware/upload");
 const upload = async (req, res) => {
   try {
@@ -46,10 +45,7 @@ const download = (req, res) => {
   });
 };
 const flow = (req, res) => {
-  console.log('Server: ', req.body);
-
-
-  res.status(200).send('X');
+  res.status(200);
 };
 module.exports = {
   upload,
